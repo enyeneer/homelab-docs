@@ -1,14 +1,3 @@
-Yep — here’s the next one in the same format, based on the summary you uploaded. 
-
-**Filename**
-`karakeep-bookmark-manager-deployment-and-openai-tagging.md`
-
-**What to do**
-Open the new file in GitHub’s **Edit** tab, then copy **from the `#` line down to `## Status`**.
-
-**Do not copy** the top and bottom `~~~~` lines themselves.
-
-````md
 # Karakeep Bookmark Manager Deployment and OpenAI Tagging
 
 This page documents the deployment of a self-hosted Karakeep instance on `seranogenomics`, intended to replace a large and increasingly unwieldy collection of browser bookmarks and folders with a more searchable, cross-device bookmark system. :contentReference[oaicite:1]{index=1}
