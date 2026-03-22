@@ -37,5 +37,5 @@ This page is meant to capture:
 - what was learned
 - what still needs to be fixed
 
-Over time, major incidents should be broken out into their own dedicated writeups under `docs/`.
+Over time, major incidents should be broken out into their own dedicated writeups under `docs/incidents`.
 
