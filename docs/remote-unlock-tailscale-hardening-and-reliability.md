@@ -366,5 +366,3 @@ gpg --symmetric --cipher-algo AES256 nas-key-material_$(date +%F).tar.gz
 ## Status
 
 Completed, with some optional cleanup and resilience improvements still remaining.
-
-````
