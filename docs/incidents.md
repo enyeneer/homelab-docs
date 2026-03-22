@@ -9,6 +9,7 @@ This page tracks notable issues, outage tests, recovery findings, and troublesho
 - [NAS Alerting, Storage Cleanup, and UPS Prep](nas-alerting-storage-cleanup-and-ups-prep.md)
 - [UPS Arrival, Switch Migration, OPNsense Fixes, YAMS Recovery, and NUT Start](ups-switch-migration-opnsense-fixes-yams-recovery-nut-start.md)
 - [2.5GbE Upgrade, 5.x LAN Migration, and OpenVPN Fix](2-5gbe-upgrade-5x-lan-migration-and-openvpn-fix.md)
+- [YAMS, DNS, Media Stack Polish, and Watchtower Fix](yams-dns-media-stack-polish-and-watchtower-fix.md)
 - [UPS / Power Outage Recovery Test](power-outage-test.md)
 
 ## Current Notable Issues
