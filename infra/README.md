@@ -4,6 +4,8 @@ This folder contains sanitized infrastructure files from the homelab, primarily 
 
 The goal is to document how services are structured and deployed without exposing secrets, private credentials, or overly brittle personal details.
 
+Redacted information is generally replaced with "..."
+
 ## Purpose
 
 This folder exists to make the homelab more reproducible and easier to understand from an infrastructure point of view.
