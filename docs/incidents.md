@@ -5,6 +5,7 @@ This page tracks notable issues, outage tests, recovery findings, and troublesho
 ## Incident Writeups
 
 - [Gluetun / Mullvad Migration: OpenVPN to WireGuard](gluetun-mullvad-wireguard-migration.md)
+- [Remote LUKS Unlock, Tailscale Hardening, and NAS/Server Reliability](remote-unlock-tailscale-hardening-and-reliability.md)
 - [UPS / Power Outage Recovery Test](power-outage-test.md)
 
 ## Current Notable Issues
