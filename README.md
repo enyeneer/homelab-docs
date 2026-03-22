@@ -1,32 +1,24 @@
 # Homelab Documentation
 
-This repository documents my homelab architecture, services, incidents, and operational notes.
+This repository documents my homelab architecture, services, troubleshooting, and operational notes. The lab is focused on practical networking, self-hosting, Linux administration, and reliability.
+
+## Environment Summary
+Current environment includes:
+- OPNsense router/firewall
+- Main server: `seranogenomics`
+- NAS: `nas`
+- LAN: `192.168.5.0/24`
+- OpenVPN subnet: `192.168.6.0/24`
+- AdGuard Home + Unbound for DNS
+- Docker/YAMS media stack
+- Home Assistant
+- UPS/NUT shutdown testing and recovery notes
 
 ## Goals
-- build practical networking and systems administration skills
-- improve reliability and recoverability
-- document changes clearly
-- create a portfolio of real troubleshooting and infrastructure work
-
-## Environment Overview
-My homelab is centered around:
-- OPNsense router/firewall
-- Linux server host
-- NAS
-- Dockerized self-hosted services
-- DNS filtering and recursive resolution
-- VPN access
-- Home Assistant
-- UPS/NUT shutdown handling
-
-## Core Services
-- OPNsense
-- OpenVPN
-- AdGuard Home
-- Unbound
-- Jellyfin / media stack
-- Home Assistant
-- NUT / UPS monitoring
+- build practical NetOps / sysadmin skills
+- improve reliability and recovery workflows
+- document troubleshooting and decisions clearly
+- maintain a public portfolio of real homelab work
 
 ## Documentation
 - [Network Topology](docs/network-topology.md)
@@ -34,5 +26,9 @@ My homelab is centered around:
 - [Incidents and Fixes](docs/incidents.md)
 - [Roadmap](docs/roadmap.md)
 
-## Why this repo exists
-This is both personal documentation and a public showcase of the infrastructure, troubleshooting, and operational work I’ve done in my homelab.
+## Current Focus
+- VPN client internet access and routing behavior
+- cleanup of stale DHCP/DNS mappings
+- preboot/dropbear remote unlock networking
+- NAS boot/power-loss behavior investigation
+- eventual OpenVPN to WireGuard migration
