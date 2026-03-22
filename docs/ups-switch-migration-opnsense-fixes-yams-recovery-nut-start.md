@@ -364,5 +364,3 @@ Bus 001 Device 002: ID 0764:0601 Cyber Power System, Inc. PR1500LCDRT2U UPS
 ## Status
 
 Completed as a transition and recovery phase, with NUT configuration and final renumbering work still remaining.
-
-Next one, same format.
