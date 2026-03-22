@@ -39,14 +39,11 @@ Current environment includes:
 
 ## Core Documentation
 
-- [Network Topology](docs/network-topology.md)
-- [Services](docs/services.md)
-- [Hardware](docs/hardware.md)
-- [DNS](docs/dns.md)
-- [Runbooks](docs/runbooks.md)
-- [Backups and Recovery](docs/backups-and-recovery.md)
-- [Maintenance and Updates](docs/maintenance-and-updates.md)
-- [Roadmap](docs/roadmap.md)
+- [Core Documentation](docs/core/README.md)
+
+## Operations Documentation
+
+- [Operations Documentation](docs/operations/README.md)
 
 ## Incident and Recovery Writeups
 
