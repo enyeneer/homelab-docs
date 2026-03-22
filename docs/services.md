@@ -35,6 +35,15 @@ This page documents the major services in the homelab, what they do, where they 
 - Sits behind AdGuard Home in the DNS path
 - Important dependency for name resolution behavior across the lab
 
+### Tailscale
+**Role:** Remote access overlay network  
+**Notes:**
+- Used as a practical remote-access layer for selected homelab services
+- Current ACL design restricts member/shared access to media-related services on `tag:media`
+- Main current Tailscale-exposed server is `seranogenomics`
+- MagicDNS is enabled for the tailnet
+- `seranogenomics` is shared outward to remote media users as a practical way to stay within the free-tier user limits
+
 ## Infrastructure
 
 ### Main Server
