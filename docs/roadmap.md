@@ -4,115 +4,165 @@ This page tracks the major next steps for the homelab, from immediate cleanup it
 
 ## Near Term
 
-### VPN Client Internet Access Cleanup
-Finish documenting and validating the current VPN behavior so remote clients have predictable access to both LAN resources and internet connectivity.
+### SG Preboot / Remote Unlock Reliability
+Finish stabilizing and proving the remote unlock workflow for `seranogenomics` during initramfs/preboot.
 
 **Goals:**
-- confirm final routing/firewall behavior
-- document the working configuration clearly
-- reduce confusion before any future VPN migration
-
-### Legacy DHCP/DNS Cleanup
-Remove or verify the removal of stale legacy mappings and old network artifacts from previous subnet layouts.
-
-**Goals:**
-- confirm old `192.168.7.x` and `192.168.8.x` references are gone
-- verify old aliases like `192.168.7.1` and `192.168.8.1` stay removed
-- simplify ongoing troubleshooting
-
-### Preboot / Dropbear Networking Cleanup
-Improve the reliability of remote unlock behavior during initramfs/preboot.
-
-**Goals:**
-- make remote unlock networking more predictable
-- reduce manual recovery steps
+- make preboot networking more predictable
+- fully validate remote unlock after reboot and after outage
+- reduce or eliminate manual recovery steps
 - document a clean recovery procedure
 
-### Documentation Improvements
-Continue turning operational notes into cleaner public-facing documentation.
+### NAS Power-Loss / Boot Reliability
+Continue investigating why `nas` does not always recover cleanly after power loss.
 
 **Goals:**
-- add a topology diagram
-- improve service dependency documentation
-- split larger topics into dedicated writeups where useful
+- narrow down BIOS / CMOS / hardware persistence issues
+- reduce dependence on PSU drain/manual intervention
+- improve confidence in unattended outage recovery
+- document the final behavior clearly once understood
+
+### Legacy DHCP / DNS Cleanup
+Keep removing stale `192.168.7.x` and `192.168.8.x` artifacts that still show up in DHCP, DNS, and client behavior.
+
+**Goals:**
+- confirm old mappings and host overrides are gone
+- verify old aliases stay removed
+- reduce troubleshooting confusion
+- keep the 5.x LAN layout clean and consistent
+
+### Topology Diagram
+Create a clean, sanitized topology diagram for the repo.
+
+**Goals:**
+- show core network flow clearly
+- include router, switch, main server, NAS, VPN, and DNS layers
+- improve readability for both personal docs and portfolio use
+
+### Documentation Cleanup
+Keep turning rough operational history into clearer public-facing documentation.
+
+**Goals:**
+- tighten the highest-value writeups
+- keep README and index pages current
+- make service, incident, and deployment docs easier to navigate
+- ensure public docs stay accurate without exposing sensitive details
 
 ## Medium Term
 
 ### OpenVPN to WireGuard Migration
-Evaluate and eventually migrate from OpenVPN to WireGuard for remote access.
+Evaluate and eventually migrate remote access from OpenVPN to WireGuard.
 
 **Goals:**
-- simplify VPN configuration
+- simplify remote-access configuration
 - improve performance and ease of use
 - preserve reliable LAN access for remote clients
+- document migration steps and tradeoffs clearly
+
+### Better Runbooks
+Expand recovery and maintenance documentation into more repeatable procedures.
+
+**Goals:**
+- outage recovery steps
+- remote unlock recovery procedure
+- NAS recovery procedure
+- VPN troubleshooting workflow
+- service restart/recovery notes
 
 ### Standardized Maintenance Cadence
-Establish a more consistent update/maintenance rhythm for core systems.
+Keep core systems on a more consistent maintenance rhythm.
 
-**Targets:**
+**Priority Systems:**
 - OPNsense
-- NAS
 - `seranogenomics`
+- `nas`
 
 **Goals:**
 - reduce drift
 - make maintenance more predictable
 - improve rollback/recovery confidence
+- validate critical services after updates
 
-### Better Runbooks
-Expand recovery and maintenance documentation into clearer repeatable procedures.
+### Monitoring and Alerting Improvements
+Build on the existing SMART, ZFS, mdraid, and UPS alerting foundation.
 
 **Goals:**
-- outage recovery steps
-- NAS recovery procedure
-- VPN troubleshooting workflow
-- service restart/recovery notes
+- improve visibility into failures earlier
+- make service and infrastructure issues easier to catch
+- keep alerting practical and low-noise
+- expand monitoring only where it meaningfully improves operations
 
 ## Longer Term
 
-### Better Monitoring and Alerting
-Improve visibility into system health, failures, and service status.
+### NAS Hardware / Storage Refresh
+Plan for eventual NAS hardware and storage upgrades.
 
 **Goals:**
-- identify failures earlier
-- make troubleshooting faster
-- improve confidence in unattended operation
-
-### NAS Hardware / Storage Expansion
-Plan for future NAS hardware refreshes and additional storage capacity as needed.
-
-**Goals:**
-- improve long-term storage flexibility
 - reduce risk around aging hardware
-- document upgrade path before changes are made
+- improve storage flexibility
+- document the upgrade path before changes are made
+- keep the storage layout clean and supportable
 
-### Camera Integration
-Add and document the Hikvision camera setup as part of the broader homelab/home infrastructure.
+### Better Network Closet Layout
+Improve the physical organization and airflow of the network/storage area.
 
 **Goals:**
-- get the device online reliably
-- document network/discovery/setup steps
-- fold it into the overall service inventory
+- cleaner cable and device layout
+- better airflow and thermal behavior
+- more stable long-term placement for UPS and network gear
+- less friction during maintenance
 
 ### Additional Self-Hosted Services
-Evaluate and document additional services as the lab grows.
+Continue evaluating new services only where they are useful and low-risk.
+
+**Current examples already added:**
+- BOOX reading stack (`Komga`, `Suwayomi`, `Calibre-Web`)
+- `Karakeep`
 
 **Possible future additions:**
 - Unpackerr
 - Joplin
 - Profilarr
 - Shelfmark
+- camera integration
+
+**Goals:**
+- add services intentionally, not just for novelty
+- keep stacks understandable and maintainable
+- document new deployments cleanly
+
+### Media / Remote Access Experience
+Continue refining the practical access model for family, remote users, and personal devices.
+
+**Goals:**
+- keep Tailscale/Jellyfin/Seerr access simple
+- improve consistency across devices where worthwhile
+- avoid risky or brittle UI hacks
+- document the operating model clearly for future reference
 
 ## Guiding Principles
 
-This homelab is being built with a few priorities in mind:
+This homelab is being built with a few consistent priorities:
 
 - prefer low-risk, high-ROI changes
 - improve reliability before adding complexity
-- document changes clearly
-- avoid exposing sensitive information in public documentation
+- keep the environment understandable
+- document failures and recovery behavior honestly
+- avoid exposing secrets or sensitive internal details in public docs
 - use the lab as both a practical tool and a professional portfolio
+
+## Current Overall Direction
+
+The homelab is no longer in a pure “just get it working” phase.
+
+The current direction is to:
+
+- stabilize recovery behavior
+- clean up remaining legacy networking artifacts
+- keep remote access intentional and well-documented
+- make operations more repeatable
+- continue turning real troubleshooting history into strong public documentation
 
 ## Status
 
-This roadmap is a living document and will be updated as priorities change.
+This roadmap is a living document and should be updated as priorities change.
