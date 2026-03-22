@@ -18,7 +18,7 @@ This page documents the major services in the homelab, what they do, where they 
 **Notes:**
 - Used for remote access to LAN resources
 - Current VPN solution, with WireGuard as a likely future migration target
-- One ongoing focus area is improving client internet access and overall routing behavior
+- One ongoing focus area is documenting and validating client routing behavior
 
 ### AdGuard Home
 **Role:** DNS filtering for client devices  
@@ -33,7 +33,6 @@ This page documents the major services in the homelab, what they do, where they 
 **Port:** `5353`  
 **Notes:**
 - Sits behind AdGuard Home in the DNS path
-- Part of the current local DNS design
 - Important dependency for name resolution behavior across the lab
 
 ## Infrastructure
@@ -62,12 +61,11 @@ This page documents the major services in the homelab, what they do, where they 
 **Notes:**
 - Separate VM in the environment
 - Part of the broader self-hosting stack
-- Included here as a core long-lived service
 
 ### Gaming PC
 **Hostname:** `ZACH-PC`  
 **IP:** `192.168.5.15`  
-**Role:** Client endpoint / general workstation  
+**Role:** Client endpoint / workstation  
 **Notes:**
 - Useful as a known LAN client for connectivity testing and validation
 
@@ -85,25 +83,43 @@ This page documents the major services in the homelab, what they do, where they 
 **Notes:**
 - Used to run self-hosted services on the main server
 - Central part of the current homelab architecture
-- Reliability and clean documentation are ongoing priorities
 
 ### Jellyfin / Media Stack
 **Role:** Self-hosted media services  
 **Notes:**
 - Part of the Docker-based application stack
-- One of the more visible “user-facing” services in the lab
-- Useful for documenting real-world service dependencies and troubleshooting
+- Includes tooling around requests, acquisition, subtitles, search, and update management
+- One of the most visible user-facing service groups in the lab
+
+### Reading Stack
+**Role:** Self-hosted manga/comics/books platform  
+**Components:**
+- `Komga`
+- `Suwayomi`
+- `Calibre-Web`
+
+**Notes:**
+- Runs as a standalone Docker Compose stack under `/opt/reading`
+- Uses NAS-backed storage
+- Supports BOOX workflow through Mihon and KOReader
+
+### Karakeep
+**Role:** Self-hosted bookmark manager  
+**Notes:**
+- Runs as a standalone Docker Compose stack on `seranogenomics`
+- Intended to replace large browser bookmark/folder sprawl
+- Later extended with OpenAI-based auto-tagging
 
 ### Home Assistant
 **Role:** Home automation  
 **Notes:**
 - Included as a core self-hosted application
-- Runs separately from the general media stack
+- Runs separately from the media stack
 - Important for demonstrating service diversity in the homelab
 
 ## Current Operational Priorities
 
-- improve VPN routing and client internet behavior
+- improve VPN routing and client internet behavior documentation
 - clean up stale DHCP/DNS legacy mappings
 - improve preboot/dropbear remote unlock networking
 - continue NAS power-loss / boot behavior investigation
