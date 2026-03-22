@@ -7,6 +7,7 @@ This page tracks notable issues, outage tests, recovery findings, and troublesho
 - [Gluetun / Mullvad Migration: OpenVPN to WireGuard](gluetun-mullvad-wireguard-migration.md)
 - [Remote LUKS Unlock, Tailscale Hardening, and NAS/Server Reliability](remote-unlock-tailscale-hardening-and-reliability.md)
 - [NAS Alerting, Storage Cleanup, and UPS Prep](nas-alerting-storage-cleanup-and-ups-prep.md)
+- [UPS Arrival, Switch Migration, OPNsense Fixes, YAMS Recovery, and NUT Start](ups-switch-migration-opnsense-fixes-yams-recovery-nut-start.md)
 - [UPS / Power Outage Recovery Test](power-outage-test.md)
 
 ## Current Notable Issues
