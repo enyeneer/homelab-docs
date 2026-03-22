@@ -2,6 +2,10 @@
 
 This repository documents my homelab architecture, services, troubleshooting, and operational notes. The lab is focused on practical networking, self-hosting, Linux administration, and reliability.
 
+## Topology
+
+![Homelab topology](images/topology.png)
+
 ## Environment Summary
 Current environment includes:
 - OPNsense router/firewall
