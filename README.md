@@ -4,9 +4,6 @@ This repository documents my homelab architecture, services, troubleshooting, de
 
 ## Topology
 
-> Topology diagram placeholder. A cleaned-up visual diagram will be added later.
-
-<!-- Uncomment once you add the image -->
 ![Homelab Topology](images/homelab-topology-drawio.png)
 
 ## Environment Summary
